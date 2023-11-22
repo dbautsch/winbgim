@@ -592,11 +592,11 @@ void setfillstyle( int pattern, int color )
     HDC hDC = BGI__GetWinbgiDC( );
     HBRUSH hBrush;
     // Unsigned char creates a truncation for some reason.
-    unsigned short Slash[8]      = { ~0xE0, ~0xC1, ~0x83, ~0x07, ~0x0E, ~0x1C, ~0x38, ~0x70 };
-    unsigned short BkSlash[8]    = { ~0x07, ~0x83, ~0xC1, ~0xE0, ~0x70, ~0x38, ~0x1C, ~0x0E };
-    unsigned short Interleave[8] = { ~0xCC, ~0x33, ~0xCC, ~0x33, ~0xCC, ~0x33, ~0xCC, ~0x33 };
-    unsigned short WideDot[8]    = { ~0x80, ~0x00, ~0x08, ~0x00, ~0x80, ~0x00, ~0x08, ~0x00 };
-    unsigned short CloseDot[8]   = { ~0x88, ~0x00, ~0x22, ~0x00, ~0x88, ~0x00, ~0x22, ~0x00 };
+    unsigned short Slash[8]      = { (unsigned short)~0xE0, (unsigned short)~0xC1, (unsigned short)~0x83, (unsigned short)~0x07, (unsigned short)~0x0E, (unsigned short)~0x1C, (unsigned short)~0x38, (unsigned short)~0x70 };
+    unsigned short BkSlash[8]    = { (unsigned short)~0x07, (unsigned short)~0x83, (unsigned short)~0xC1, (unsigned short)~0xE0, (unsigned short)~0x70, (unsigned short)~0x38, (unsigned short)~0x1C, (unsigned short)~0x0E };
+    unsigned short Interleave[8] = { (unsigned short)~0xCC, (unsigned short)~0x33, (unsigned short)~0xCC, (unsigned short)~0x33, (unsigned short)~0xCC, (unsigned short)~0x33, (unsigned short)~0xCC, (unsigned short)~0x33 };
+    unsigned short WideDot[8]    = { (unsigned short)~0x80, (unsigned short)~0x00, (unsigned short)~0x08, (unsigned short)~0x00, (unsigned short)~0x80, (unsigned short)~0x00, (unsigned short)~0x08, (unsigned short)~0x00 };
+    unsigned short CloseDot[8]   = { (unsigned short)~0x88, (unsigned short)~0x00, (unsigned short)~0x22, (unsigned short)~0x00, (unsigned short)~0x88, (unsigned short)~0x00, (unsigned short)~0x22, (unsigned short)~0x00 };
     HBITMAP hBitmap;
 
     // Convert from BGI color to RGB color

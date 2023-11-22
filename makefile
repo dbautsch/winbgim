@@ -34,9 +34,8 @@ file.o: file.cxx dibutil.h dibapi.h winbgitypes.h
 	g++ $(CPPFLAGS) -c file.cxx
 
 graphics.h: winbgim.h
-	rm graphics.h
-	cp winbgim.h graphics.h
+	del graphics.h
+	copy winbgim.h graphics.h
 
 bgi.exe: bgi.cxx
 	g++ bgi.cxx -o bgi.exe
-
