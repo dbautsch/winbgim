@@ -59,11 +59,7 @@ WindowData* BGI__GetWindowDataPtr( HWND hWnd )
 	exit(0);
     }
     // This gets the address of the WindowData structure associated with the window
-    // TODOMGM: Change this function to GetWindowLongPtr and change the set function
-    // elsewhere to SetWindowLongPtr.  We are using the short version now because
-    // g++ does not support the long version.
-    // return (WindowData*)GetWindowLongPTR( hWnd, GWLP_USERDATA );
-    return (WindowData*)GetWindowLong( hWnd, GWL_USERDATA );
+    return (WindowData*)GetWindowLongPtr( hWnd, GWLP_USERDATA );
 }
 
 
